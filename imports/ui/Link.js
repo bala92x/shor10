@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class LinkComp extends React.Component {
+export default class Link extends React.Component {
     onLogout = () => {
         this.props.history.push('/');
     }

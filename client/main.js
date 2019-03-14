@@ -6,7 +6,7 @@ import { createBrowserHistory } from 'history';
 
 import Login from '../imports/ui/Login';
 import Signup from '../imports/ui/Signup';
-import LinkComp from '../imports/ui/Link';
+import Link from '../imports/ui/Link';
 import NotFound from '../imports/ui/NotFound';
 
 const history = createBrowserHistory();
@@ -15,7 +15,7 @@ const routes = (
         <Switch>
             <Route path="/" exact component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route path="/links" component={LinkComp} />
+            <Route path="/links" component={Link} />
             <Route component={NotFound} />
         </Switch>
     </Router>
