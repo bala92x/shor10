@@ -31,9 +31,9 @@ Tracker.autorun(() => {
     const isAuthenticatedPage = authenticatedPages.includes(pathname);
 
     if (isUnauthanticatedPage && isAuthenticated) {
-        history.push('/links');
+        history.replace('/links');
     } else if (isAuthenticatedPage && !isAuthenticated) {
-        history.push('/')
+        history.replace('/')
     }
 });
 
