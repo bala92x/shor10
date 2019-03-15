@@ -1,8 +1,9 @@
 import React from 'react';
+import { Accounts } from 'meteor/accounts-base';
 
 export default class Link extends React.Component {
     onLogout = () => {
-        this.props.history.push('/');
+        Accounts.logout();
     }
 
     render() {
@@ -10,7 +11,7 @@ export default class Link extends React.Component {
             <div>
                 <h1>Links</h1>
     
-                <button onClick={this.onLogout}>Back</button>
+                <button onClick={this.onLogout}>Logout</button>
             </div>
         );
     }
