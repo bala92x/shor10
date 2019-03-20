@@ -6,16 +6,12 @@ const SimpleSchema = require("simpl-schema").default;
 Accounts.validateNewUser((user) => {
     const email = user.emails[0].address;
 
-    try {
-        new SimpleSchema({
-            email: {
-                type: String,
-                regEx: SimpleSchema.RegEx.Email
-            }
-        }).validate({ email });
-    } catch (err) {
-        throw new Meteor.Error(400, err.message);
-    }
+    new SimpleSchema({
+        email: {
+            type: String,
+            regEx: SimpleSchema.RegEx.Email
+        }
+    }).validate({ email });
 
     return true;
 });
