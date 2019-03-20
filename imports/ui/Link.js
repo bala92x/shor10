@@ -4,7 +4,6 @@ import { Meteor } from 'meteor/meteor';
 
 import LinksList from './LinksList';
 import { onEnterPrivatePage } from '../utils/auth';
-import { Links } from '../api/links';
 
 export default class Link extends React.Component {
     onLogout = () => {
@@ -17,10 +16,7 @@ export default class Link extends React.Component {
         const url = this.refs.url.value.trim();
 
         if (url) {
-            Links.insert({
-                url,
-                userId: Meteor.userId()
-            });
+            Meteor.call('links.insert', url);
             this.refs.url.value = '';
         }
     }
