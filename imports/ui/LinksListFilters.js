@@ -11,7 +11,7 @@ export default class LinksListFilters extends React.Component {
     }
 
     componentDidMount() {
-        const visibilityTracker = this.tracker = Tracker.autorun(() => {
+        this.tracker = Tracker.autorun(() => {
             this.setState({
                 showVisible: Session.get('showVisible')
             });
@@ -19,7 +19,7 @@ export default class LinksListFilters extends React.Component {
     }
 
     componentWillUnmount() {
-        visibilityTracker.stop()
+        this.tracker.stop();
     }
 
     render() {
