@@ -1,0 +1,10 @@
+.button {
+    background-color: $button-bg;
+    border: none;
+    color: $button-color;
+    cursor: pointer;
+    font-size: $base-font-size;
+    margin-bottom: $space;
+    padding: 1rem;
+    text-transform: uppercase;
+}
