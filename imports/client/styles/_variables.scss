@@ -1,5 +1,8 @@
 // Colors
+$black: #000000;
 $grey: #dddddd;
+$purple: #5b4681;
+$white: #ffffff;
 
 // Spacing
 $space: 1.4rem;
@@ -9,11 +12,13 @@ $base-font-size: 1.4rem;
 
 // Form inputs
 $input-border: $grey;
+$input-spacing: 1rem;
 
 // Boxed view
 $boxed-view-overlay-bg: $grey;
-$boxed-view-bg: white;
+$boxed-view-bg: $white;
 
 // Button
-$button-bg: #5b4681;
-$button-color: white;
+$button-bg: $purple;
+$button-color: $white;
+$button-pill-color: $purple;

@@ -57,7 +57,7 @@ export default class AddLink extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleModalOpen}>
+                <button onClick={this.handleModalOpen} className="button">
                     + Add Link
                 </button>
                 <Modal
