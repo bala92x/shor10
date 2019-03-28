@@ -3,6 +3,7 @@
     border: none;
     color: $button-color;
     cursor: pointer;
+    font-family: $primary-font-family;
     font-size: $base-font-size;
     line-height: 1.2;
     margin-bottom: $space;
@@ -33,5 +34,6 @@
     background-color: transparent;
     border: .1rem solid $button-pill-color;
     color: $button-pill-color;
+    margin: 0 ($space / 2) 0 0;
     padding: .3rem .8rem;
 }

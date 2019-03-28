@@ -27,6 +27,14 @@ export default class LinksList extends React.Component {
     }
 
     renderLinksListItems() {
+        if (this.state.links.length === 0) {
+            return (
+                <div className="item">
+                    <p className="item__status-message">No Links Found</p>
+                </div>
+            );
+        }
+
         const linksListItems = this.state.links.map((link) => {
             const shortUrl = Meteor.absoluteUrl(link._id);
             return <LinkListItem key={link._id} shortUrl={shortUrl} {...link} />;

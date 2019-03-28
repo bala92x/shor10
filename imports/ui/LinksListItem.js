@@ -44,7 +44,7 @@ export default class LinksListItem extends React.Component {
         }
 
         return (
-            <p>
+            <p className="item__message">
                 {visitMessage} {lastVisitMessage}
             </p>
         );
@@ -52,10 +52,9 @@ export default class LinksListItem extends React.Component {
 
     render() {
         return (
-            <div>
-                <p>{this.props.url}</p>
-                <p>{this.props.shortUrl}</p>
-                <p>{this.props.visible.toString()}</p>
+            <div className="item">
+                <h2>{this.props.url}</h2>
+                <p className="item__message">{this.props.shortUrl}</p>
                 {this.renderStats()}
                 <a href={this.props.shortUrl} target="_blank" className="button button--pill button--link">
                     Visit
