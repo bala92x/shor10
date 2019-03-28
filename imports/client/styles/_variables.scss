@@ -6,6 +6,7 @@ $white: #ffffff;
 
 // Spacing
 $space: 1.4rem;
+$site-max-width: 50rem;
 
 // Font sizes
 $base-font-size: 1.4rem;
@@ -25,3 +26,7 @@ $button-secondary-bg: #f5f5f5;
 $button-secondary-color: #777777;
 $button-secondary-border-color: $grey;
 $button-pill-color: $brand-primary;
+
+//Header
+$header-bg: $brand-primary;
+$header-color: $white;
