@@ -66,10 +66,12 @@ export default class AddLink extends React.Component {
                     appElement={document.getElementById('app')}
                     onAfterOpen={this.handleAfterModalOpen}
                     onRequestClose={this.handleModalClose}
+                    className="boxed-view__box"
+                    overlayClassName="boxed-view boxed-view--modal"
                 >
-                    <h1>Add Link</h1>
+                    <h1>Shor10 Link</h1>
                     {this.state.error ? <p>{this.state.error}</p> : undefined}
-                    <form onSubmit={this.onSubmit}>
+                    <form onSubmit={this.onSubmit} className="boxed-view__form">
                         <input
                             type="text"
                             placeholder="URL"
@@ -77,11 +79,13 @@ export default class AddLink extends React.Component {
                             value={this.state.url}
                             onChange={this.onChange}
                         />
-                        <button>Add Link</button>
+                        <button className="button">
+                            Add Link
+                        </button>
+                        <button type="button" onClick={this.handleModalClose} className="button button--secondary">
+                            Cancel
+                        </button>
                     </form>
-                    <button onClick={this.handleModalClose}>
-                        Cancel
-                    </button>
                 </Modal>
             </div>
         );
