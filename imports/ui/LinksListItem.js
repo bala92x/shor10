@@ -35,6 +35,12 @@ export default class LinksListItem extends React.Component {
         Meteor.call('links.setVisibility', this.props._id, !this.props.visible);
     }
 
+    onDeleteClick = () => {
+        if (window.confirm("Are you sure you want to delete this link? It is irreversible, and anyone trying to access this URL in the future will receive an error.")) {
+            Meteor.call('links.delete', this.props._id);
+        }
+    }
+
     renderStats = () => {
         const visitMessage = `${this.props.visitedCount} visit${this.props.visitedCount === 1 ? '' : 's'}`
         let lastVisitMessage = null;
@@ -64,6 +70,9 @@ export default class LinksListItem extends React.Component {
                 </button>
                 <button onClick={this.onHideClick} className="button button--pill">
                     { this.props.visible ? 'Hide' : 'Unhide' }
+                </button>
+                <button onClick={this.onDeleteClick} className="button button--pill button--warning">
+                    Delete
                 </button>
             </div>
         );

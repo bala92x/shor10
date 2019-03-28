@@ -37,3 +37,8 @@
     margin: 0 ($space / 2) 0 0;
     padding: .3rem .8rem;
 }
+
+.button--warning {
+    border: .1rem solid $button-warning-color;
+    color: $button-warning-color;
+}

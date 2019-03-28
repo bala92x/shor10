@@ -38,6 +38,22 @@ Meteor.methods({
         });
     },
 
+    'links.delete'(_id) {
+
+        if (!this.userId) {
+            throw new Meteor.Error('not-authorized');
+        }
+
+        new SimpleSchema({
+            _id: {
+                type: String,
+                min: 1
+            }
+        }).validate({ _id });
+
+        Links.remove({ _id });
+    },
+
     'links.setVisibility'(_id, visible) {
         
         if (!this.userId) {
